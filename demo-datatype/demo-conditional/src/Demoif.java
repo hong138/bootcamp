@@ -14,7 +14,9 @@ public class Demoif {
       System.out.println("x >= 30");
     } else {
       System.out.println(x < 30);
-    }      
+    }
+
+    // 8 primitives, String (equals(), charAt(), length())
     
 
   }
