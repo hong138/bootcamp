@@ -228,9 +228,9 @@ public class Demoif {
   // It is a weak password. length < 12
 
   String password = "Admin12345678#";
-  char speChar;
-
-  boolean isSpecial = (speChar == '!') || (speChar == '@') || (speChar == '#') || (speChar == '$');
+  
+  boolean isSpecial = password.contains("!") || password.contains("@") || password.contains("#") || password.contains("$");
+  
 
   if (password.length() > 12){
     if (isSpecial) {
