@@ -12,4 +12,3 @@ public class JavaQuest5 {
     }System.out.println("The index of the last character of " + target + " is " + pos);
   }
 }
-//  The index of the last character of c is 11
