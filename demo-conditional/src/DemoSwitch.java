@@ -47,7 +47,11 @@ public class DemoSwitch {
         default:
           System.out.println("It is weekend");
     }
-
+    int x = 3;
+    int y = (x++ + 3) * x++;
+    // (3 + 3) * 4
+    System.out.println(x);
+    System.out.println(y);
 
 
 

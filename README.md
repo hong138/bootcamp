@@ -1,1 +1,3 @@
 # bootcamp
+
+# define case & result
