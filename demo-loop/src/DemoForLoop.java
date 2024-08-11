@@ -232,6 +232,54 @@ public class DemoForLoop {
       }
       
 
+    // Example 16
+    // ***** -> i = 0
+    // ****  -> i = 1
+    // ***   -> i = 2
+    // **    -> i = 3
+    // *     -> i = 4
+
+    // Nested Loop (i and j)
+    for (int i = 0; i < 5; i++) {
+      for (int j = 0; j < 5 - i; j++) {
+          System.out.print("*");
+      }System.out.println("");
+    }
+
+    // Example 17
+    // ******
+    // ****
+    // **
+
+    for (int i = 0; i < 6; i++){
+      if (i % 2 == 0){
+        for (int j = 0; j < 6 - i; j++){
+          System.out.print("*");
+        }System.out.println("");
+      }
+    }
+
+    // infinite loop
+    // for ( ; ; ) {
+    // System.out.println("hello");
+    // }
+
+    // * Mistake in condition (i >= 0)
+    // for (int i = 0; i >= 0; i++) {
+    //   System.out.println("hello");
+    // }
+
+    String searchMe = "peter piper picked a peck of pickled peppers";
+    int num = 0;
+    for (int i = 0; i < searchMe.length(); i++) {
+      // without continue
+      if (searchMe.charAt(i) == 'p') {
+        num++;
+      }
+    }
+    System.out.println("Found " + num + " p's in the string."); // num = ?
+
+
 
     }
 }
