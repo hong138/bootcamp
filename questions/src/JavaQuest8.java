@@ -59,15 +59,5 @@ public class JavaQuest8 {
     System.out.println(secondMax4);
 
 
-
-
-
-
-
-
-
-
-
-
   }
 }
