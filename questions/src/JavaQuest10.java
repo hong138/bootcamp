@@ -20,6 +20,9 @@ public class JavaQuest10 {
       newArr = my_array;
     } else {
       for (int i = 0; i < newArr.length; i++) {
+        for (int j = 0; j < 10; j++) {
+            
+        }
           if (i == indexPosition){
             newArr[i] = newValue;
             newArr[i + 1] = newArr[i];

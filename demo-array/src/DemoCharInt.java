@@ -1,4 +1,7 @@
 
+import java.util.Arrays;
+
+
 
 public class DemoCharInt {
   public static void main(String[] args) {
@@ -72,6 +75,104 @@ public class DemoCharInt {
     System.out.println(b1); // -128
     b1 = (byte) 129;
     System.out.println(b1); // -127
+    b1 = (byte) 5568;
+    System.out.println(b1); // -64
+
+    // double -> int (precision loss)
+    double d10 = 10.25;
+    int x5 = (int) d10;
+    System.out.println(x5); // 10.25 -> 10
+    d10 = 10.99;
+    x5 = (int) d10;
+    System.out.println(x5); // 10.99 -> 10
+
+    // overflow + for loop (careless mistake)
+    // for (byte i = 0; i < 128; i++) {
+    //   System.out.println("hello");
+    // }
+
+    byte b20 = 7;
+    int i20 = 8;
+    boolean result = b20 < i20; 
+
+    // byte b21 = 128; // compile error, Not overflow;
+    byte b21 = 127;
+    int i21 = 128;
+    byte b22 = (byte) i21; // overflow
+
+
+    int[] arr2 = new int[3];
+    max = Integer.MIN_VALUE;
+    for (int i = 0; i < arr2.length; i++) {
+      if (arr2[i] > max){
+        max = arr2[i];
+      }
+    }
+
+    long l2 = Long.MIN_VALUE; // -9223372036854775808
+    System.out.println(l2); // 2^-63
+
+    // Arrays.copyof()
+    // Problem
+    // arr4 -> obj ref
+    // int array object
+    int[] arr4 = new int[] {1,2,3};
+    arr4 = new int[] {2,3,4};
+
+    // Example 1
+    // We have 2 object reference, but one object
+    int[] arr21 = new int[] {1,2,3};
+    int[] arr22 = arr21; // pass by reference
+    System.out.println(arr21[2]);
+    System.out.println(arr22[2]);
+
+    arr21[1] = 100;
+    System.out.println(arr22[1]);
+
+    // Example 2
+    int x1 = 10;
+    int x4 = x1; // pass by value
+    System.out.println(x4);
+
+    x1 = 100;
+    System.out.println(x1); 
+    System.out.println(x4);
+
+    // Example 3
+    String s1 = "abc";
+    String s3 = s1; // pass by value
+
+    s1 = "def";
+    System.out.println(s1); // def
+    System.out.println(s3); // abc
+
+    // Conclusion
+    // 8 Primitives + 8 Wrapprer Classes + String -> Pass by value
+    // Other than that -> Pass by reference
+
+    // For Pass by reference -> Example 1
+    // For Pass by value -> Example 2 & 3
+
+    // How to backup an array?
+    // Arrays.copyOf()
+    // Heap memory -> create another int array
+    int[] backupArray = Arrays.copyOf(arr21, arr21.length); // define the length of new array
+    System.out.println(Arrays.toString(backupArray));
+
+    // Bubble Sort/ Insertion Sort (Nested Loop)
+    int [] beforeSort = new int[] {30, -3, 55, 60, -89, 64, 100};
+    Arrays.sort(beforeSort); // performance: nlogn
+    System.out.println(Arrays.toString(beforeSort)); // [-89, -3, 30, 55, 60, 64, 100]
+    
+
+
+
+
+
+
+
+
+
 
   }
 }
