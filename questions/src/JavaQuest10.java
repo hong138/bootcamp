@@ -16,22 +16,21 @@ public class JavaQuest10 {
     System.out.println("Original Array : " + Arrays.toString(my_array));
 
     int[] newArr = new int [my_array.length];
-    if (indexPosition > my_array.length){
-      newArr = my_array;
-    } else {
-      for (int i = 0; i < newArr.length; i++) {
-        for (int j = 0; j < 10; j++) {
-            
+
+    for (int i = 0; i < newArr.length; i++) {
+        if (i == indexPosition){
+          newArr[i] = newValue;
+        } else if (i < indexPosition){
+          newArr[i] = my_array[i];
+        } else{
+          newArr[i] = my_array[i - 1];
         }
-          if (i == indexPosition){
-            newArr[i] = newValue;
-            newArr[i + 1] = newArr[i];
-          }
-      }
     }
+    System.out.println("New Array: " + Arrays.toString(newArr));
+    
 
 
     // my_array = newArr;
-    System.out.println("New Array: " + Arrays.toString(newArr));
+    
   }
 }

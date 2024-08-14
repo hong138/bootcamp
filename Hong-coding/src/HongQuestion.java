@@ -2,14 +2,6 @@ import java.util.Arrays;
 
 public class HongQuestion {
   public static void main(String[] args) {
-    
-    // Demo For Loop 
-    // Why this condition is a mistake? infinite loop?
-    // * Mistake in condition (i >= 0)
-    // for (int i = 0; i >= 0; i++) {
-    //   System.out.println("hello");
-    // }
-
 
     // Demo Array
     // Given int value: 0 < x < 9
