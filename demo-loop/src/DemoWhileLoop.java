@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.Random;
 
 public class DemoWhileLoop {
@@ -53,33 +52,33 @@ public class DemoWhileLoop {
     // Approach 2
     // Tips: % and /
     // how to convert 1 to '1'
-    int a = code;
-    int arrLength = 0;
-    while (a > 0){
-      // 1234 % 10 -> 4
-      // (char)(a % 10 + '0');
-      a = a / 10;
-      arrLength++;
-    }
-    codes = new char[arrLength];
-    a = code;
-    int idx = 0;
-    while (a > 0){
-      codes[idx++] = (char)(a % 10 + '0');
-      idx++;
-      a = a / 10;
-      arrLength++;
-    }
-    System.out.println(Arrays.toString(codes));
+    // int a = code;
+    // int arrLength = 0;
+    // while (a > 0){
+    //   // 1234 % 10 -> 4
+    //   // (char)(a % 10 + '0');
+    //   a = a / 10;
+    //   arrLength++;
+    // }
+    // codes = new char[arrLength];
+    // a = code;
+    // int idx = 0;
+    // while (a > 0){
+    //   codes[idx++] = (char)(a % 10 + '0');
+    //   idx++;
+    //   a = a / 10;
+    //   arrLength++;
+    // }
+    // System.out.println(Arrays.toString(codes));
 
     // reverse
-    char backup = ' ';
-    for (int i = 0; i < codes.length / 2 ; i--) {
-        backup = codes[i];
-        codes[i] = codes[codes.length - i - 1];
-        codes[codes.length - i - 1] = backup;
-    }
-    System.out.println(Arrays.toString(codes));
+    // char backup = ' ';
+    // for (int i = 0; i < codes.length / 2 ; i--) {
+    //     backup = codes[i];
+    //     codes[i] = codes[codes.length - i - 1];
+    //     codes[codes.length - i - 1] = backup;
+    // }
+    // System.out.println(Arrays.toString(codes));
 
     count = 0;
     sum = 0;
@@ -91,6 +90,15 @@ public class DemoWhileLoop {
         break;
     }
     System.out.println(sum);
+
+    // 
+    int num = 54321;
+    String result = "";
+    while (num > 0) { 
+      result += num % 10; // retrieve, String + int
+      num /= 10; // 54321 -> 5432 -> 543 -> 54 -> 5 -> 0 (exit)
+    }
+    System.out.println(result);
 
 
 
