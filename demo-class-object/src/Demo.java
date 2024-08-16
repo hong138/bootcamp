@@ -41,9 +41,12 @@ public class Demo {
     // getBIM() -> class encapsulates complicated behavior
     System.out.println(staff.getBMI());
 
-    Staff staff2 = new Staff("Kachu", "Pi", 1.5, 40);
+    Staff staff2 = new Staff(00001, 30000, "Kachu", "Pi", 1.5, 40);
     System.out.println(staff2.getBMI());
 
-
+    Equipment equipment = new Equipment(1010, "Box", 20240816, 100, 200, 50);
+    System.out.println(equipment.getEquipmentId());
+    System.out.println(equipment.getArea());
+    System.out.println(equipment.getVolume());
   }
 }
