@@ -8,22 +8,15 @@ public class User {
     private int age;
     private int userId;
     private int phoneNumber;
-    private String gender;
-    private String address;
-    private String email;
 
     public User(Order[] orders, String firstName, String lastName, 
-                int age, int userId, int phoneNumber, 
-                String gender, String address, String email) {
+                int age, int userId, int phoneNumber) {
       this.orders = orders;
       this.firstName = firstName;
       this.lastName = lastName;
       this.age = age;
       this.userId = userId;
       this.phoneNumber = phoneNumber;
-      this.gender = gender;
-      this.address = address;
-      this.email = email;
       }
     // setter
     public void setFirstName(String firstName) {
@@ -46,18 +39,6 @@ public class User {
       this.phoneNumber = phoneNumber;
     }
 
-    public void setGender(String gender) {
-      this.gender = gender;
-    }
-
-    public void setAddress(String address) {
-      this.address = address;
-    }
-
-    public void setEmail(String email) {
-      this.email = email;
-    }
-
     // getter
     public Order[] getOrders(){
       return this.orders;
@@ -77,18 +58,5 @@ public class User {
 
     public int getPhoneNumber(){
       return this.phoneNumber;
-    }
-
-    public String getGender(){
-      return this.gender;
-    }
-
-    public String getAddress(){
-      return this.address;
-    }
-
-    public String getEmail(){
-      return this.email;
-    }
-  
+    }  
 }

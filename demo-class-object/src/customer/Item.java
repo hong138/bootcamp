@@ -46,6 +46,14 @@ public class Item {
     return this.itemId;
   }
 
+  public int getQuantity(){
+    return this.quantity;
+  }
+
+  public double getPrice(){
+    return this.price;
+  }
+
   public double getTotalAmount(){
     return this.price * this.quantity;
   }
