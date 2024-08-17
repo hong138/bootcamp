@@ -1,6 +1,8 @@
 package customer;
 
+import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
+import java.util.Date;
 
 public class Order {
   private Item[] items;
@@ -32,6 +34,12 @@ public class Order {
             maxItemNameLength = item.getItemName().length();
         }
     }
+
+    Date date = new Date();
+    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+    String formattedDate = sdf.format(date);
+
+    sb.append("Date: ").append(formattedDate).append("\n");
 
     for (Item item : items) {
     sb.append(String.format("Item: %-"+maxItemNameLength+"s | Quantity: %d | Price per unit: $%.2f\n",
