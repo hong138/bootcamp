@@ -9,15 +9,19 @@ public class User {
     private int userId;
     private int phoneNumber;
 
-    public User(Order[] orders, String firstName, String lastName, 
+    public User(){
+
+    }
+
+    public User(String firstName, String lastName, 
                 int age, int userId, int phoneNumber) {
-      this.orders = orders;
       this.firstName = firstName;
       this.lastName = lastName;
       this.age = age;
       this.userId = userId;
       this.phoneNumber = phoneNumber;
       }
+
     // setter
     public void setFirstName(String firstName) {
       this.firstName = firstName;
@@ -59,4 +63,10 @@ public class User {
     public int getPhoneNumber(){
       return this.phoneNumber;
     }  
+
+    static class getFullName {
+
+        public getFullName() {
+        }
+    }
 }

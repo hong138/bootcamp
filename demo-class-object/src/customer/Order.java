@@ -7,10 +7,20 @@ import java.util.Date;
 public class Order {
   private Item[] items;
   private LocalDateTime checkoutDateTime;
+  private User[] users;
 
-  public Order(Item[] items, LocalDateTime checkoutDateTime){
+  public Order(Item[] items1, LocalDateTime now, User customer){
+
+  }
+
+  public Order(Item[] items, LocalDateTime checkoutDateTime, User[] users){
     this.items = items;
     this.checkoutDateTime = LocalDateTime.now();
+    this.users = users;
+  }
+
+  public User[] getUsers(){
+    return this.users;
   }
 
   public Item[] getItems(){
@@ -28,6 +38,9 @@ public class Order {
   public String getOrderDetails() {
     StringBuilder sb = new StringBuilder();
     sb.append("Order Details:\n");
+    for (User user : users) {
+    sb.append("User: ").append(user.getFullName()).append("\n");
+    }
     int maxItemNameLength = 0;
     for (Item item : items) {
         if (item.getItemName().length() > maxItemNameLength) {
