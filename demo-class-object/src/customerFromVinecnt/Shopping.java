@@ -3,11 +3,10 @@ package customerFromVinecnt;
 public class Shopping {
   public static void main(String[] args) {
     // Create User
-    // Create Order
-    // Create Item
-
-    Item apple = new Item(10.9, 4);
-    Item orange = new Item(13.2, 7);
+    // Create Orders
+    // Create items
+    Item apple = new Item(10.99, 4);
+    Item orange = new Item(11.9, 2);
 
     Order order = new Order();
     order.add(apple);
@@ -16,16 +15,18 @@ public class Shopping {
     User user = new User();
     user.add(order);
 
-    System.out.println(user.totalTransactionAmount());
+    System.out.println(user.totalTransactionAmount()); // 67.76
 
+    Item orange2 = new Item(12.5, 1);
+    Item apple2 = new Item(10.99, 2);
 
+    Order order2 = new Order();
+    order2.add(orange2);
+    order2.add(apple2);
+    order2.remove(0); // removed 1st item
 
-
-
-
-
-
-
+    user.add(order2);
+    System.out.println(user.totalTransactionAmount()); // 67.76 + 10.99 * 2 = 89.74
 
   }
 }
