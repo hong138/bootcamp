@@ -55,14 +55,5 @@ public class DemoScanner {
         case 3:
           System.out.println("Current balance:" + currentBalance);
     }
-
-
-    
-
-
-
-
-
-    
   }
 }

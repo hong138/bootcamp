@@ -52,8 +52,5 @@ public class DemoSwitch {
     // (3 + 3) * 4
     System.out.println(x);
     System.out.println(y);
-
-
-
   }
 }

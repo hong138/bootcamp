@@ -59,6 +59,16 @@ public class DemoBigDecimal {
     System.out.println(BigDecimal.valueOf(11).compareTo(BigDecimal.valueOf(10.0))); // 1
     System.out.println(BigDecimal.valueOf(9).compareTo(BigDecimal.valueOf(10.0))); // -1
 
+    // new BigDecimal
+    double d1 = new BigDecimal("0.1").add(new BigDecimal("0.2")).doubleValue();
+    System.out.println(d1); // 0.3
+
+    double d2 = new BigDecimal(0.1).add(new BigDecimal(0.2)).doubleValue();
+    System.out.println(d2); // 0.30000000000000004
+
+    double d3 = BigDecimal.valueOf(0.1d).add(BigDecimal.valueOf(0.2f)).doubleValue();
+    System.out.println(d3); // 0.30000000447034836
+
 
 
   }

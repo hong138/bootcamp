@@ -40,7 +40,6 @@ public class DemostaticMethod {
     // Instance method 
     // "abc".charAt(0) -> object presentation
 
-
     // Compiler knows which method the caller is referring during compile time
     System.out.println(sum(1, 2));
 
@@ -57,11 +56,7 @@ public class DemostaticMethod {
 
     System.out.println("Circule Area= " + calculateAreaForCircule(6));
     System.out.println("Square Area= " + calculateAreaForSquare(6));
-
-
     }
-
-
     ////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////
     // if input is able to produce output, then it is a static method
@@ -120,6 +115,4 @@ public class DemostaticMethod {
     System.out.println("x=" + x);
     System.out.println("y=" + y);
   }
-
-  
 }

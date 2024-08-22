@@ -60,6 +60,10 @@ public class Suit {
     return this.value > suit.getValue() ? 1 : -1;
   }
 
+  public String toString(){
+    return "(" + this.value + ")";
+    }
+
   public static void main(String[] args) {
     // card.getSuit().getValue == 1;
     // if (card.getSuit().isDiamond())

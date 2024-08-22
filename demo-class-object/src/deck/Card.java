@@ -118,12 +118,16 @@ public class Card {
     return -1;
   }
 
+    public String toString(){
+    return "Card(" + "Rank=" + this.rank + ", Suit=" + this.suit + ")";
+    }
+
   public static void main(String[] args) {
     // valueOf(''), 
-    Card c1 = new Card(new Rank('A'), Suit.ofDiamond());
-    Card c2 = new Card(new Rank('A'), Suit.ofClub());
-    Card c3 = new Card(new Rank('J'), Suit.ofDiamond());
-    Card c4 = new Card(new Rank('J'), Suit.ofDiamond());
+    Card c1 = new Card(Rank.ofACE(), Suit.ofDiamond());
+    Card c2 = new Card(Rank.ofACE(), Suit.ofClub());
+    Card c3 = new Card(Rank.ofJACK(), Suit.ofDiamond());
+    Card c4 = new Card(Rank.ofJACK(), Suit.ofDiamond());
 
     System.out.println(c2.compareTo(c1)); // 1
     System.out.println(c1.compareTo(c2)); // -1
