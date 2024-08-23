@@ -4,19 +4,19 @@ import java.util.Arrays;
 
 public class Deck {
 
-    private static final Suit[] suits = new Suit[]{Suit.ofDiamond(), Suit.ofClub(), Suit.ofHeart(), Suit.ofSpade()};
-    private static final Rank[] ranks = new Rank[]{Rank.ofACE(), Rank.ofTWO(), Rank.ofTHREE(), Rank.ofFOUR(), 
-                                                   Rank.ofFIVE(), Rank.ofSIX(), Rank.ofSEVEN(), Rank.ofEIGHT(), 
-                                                   Rank.ofNINE(),  Rank.ofTEN(),  Rank.ofJACK(),  Rank.ofQUEEN(),  Rank.ofKING()};
+    // private static final Suit[] suits = new Suit[]{Suit.ofDiamond(), Suit.ofClub(), Suit.ofHeart(), Suit.ofSpade()};
+    // private static final Rank[] ranks = new Rank[]{Rank.ofACE(), Rank.ofTWO(), Rank.ofTHREE(), Rank.ofFOUR(), 
+    //                                                Rank.ofFIVE(), Rank.ofSIX(), Rank.ofSEVEN(), Rank.ofEIGHT(), 
+    //                                                Rank.ofNINE(),  Rank.ofTEN(),  Rank.ofJACK(),  Rank.ofQUEEN(),  Rank.ofKING()};
 
     private Card[] cards;
 
     public Deck() {
-        this.cards = new Card[suits.length * ranks.length]; // !!! initialize emtry array
+        this.cards = new Card[Suit2.length() * Rank2.length()]; // !!! initialize emtry array
         // create 52 cards, and then put it into Deck Object
         int idx = 0;
-        for (Suit suit : suits) {
-          for (Rank rank : ranks) {
+        for (Suit2 suit : Suit2.values()) {
+          for (Rank2 rank : Rank2.values()) {
             this.cards[idx++] = new Card(rank, suit);
             }
         }
@@ -32,7 +32,7 @@ public class Deck {
 
     public void shuffle(){
       for (int i = cards.length -1; i > 0; i--) {
-        int randomIndex = (i * suits.length + ranks.length) % cards.length;
+        int randomIndex = (i * Suit2.length() + Rank2.length()) % cards.length;
         Card temp = cards[i];
         cards[i] = cards[randomIndex];
         cards[randomIndex] = temp;

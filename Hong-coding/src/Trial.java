@@ -23,7 +23,7 @@ public class Trial {
 
     System.out.println(StaticFinal);
     System.out.println(obj1.fin);
-    System.out.println(Trial.staExample(obj2));
+    // System.out.println(Trial.staExample(obj2));
   }
 
 }

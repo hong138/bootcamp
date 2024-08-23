@@ -82,6 +82,13 @@ public class Rank {
     return this.value;
   }
 
+  public boolean equals(Rank rank){
+    if (this == rank){
+      return true;
+    }
+    return false;
+  }
+
   public String toString(){
     return "(" + this.value + ")";
     }

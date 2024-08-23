@@ -18,7 +18,8 @@ public class Calculator {
   // c.setY(5)
   // c.sum()
   // !!! Understand why sum() and sum(double x, double y) co-exists
-  public double sum(){ // method signature
+  // No static, it is instance method
+  public double sum(){ // method signature 
     return BigDecimal.valueOf(this.x).add(BigDecimal.valueOf(this.y)).doubleValue();
   }
 

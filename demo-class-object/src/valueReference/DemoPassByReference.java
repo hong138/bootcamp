@@ -13,6 +13,8 @@ public class DemoPassByReference {
     String s = "hello";
     String s2 = toUpperCase(s);
     System.out.println(s2);
+
+    
   }
 
   // String object -> pass by value
