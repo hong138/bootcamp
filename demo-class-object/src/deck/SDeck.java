@@ -1,9 +1,10 @@
 package deck;
 
 public class SDeck {
-  private final Card[] cards = new Card[52];
+  private final Card[] cards;
 
-  public SDeck(){
+  public SDeck(Card[] cards){
+    if 
 
   }
 

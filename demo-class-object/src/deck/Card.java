@@ -144,4 +144,13 @@ public class Card {
     // Card.CLUB = 10; // final variable cannot be modified
   }
 
+  public boolean isPair(Card card) {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'isPair'");
+  }
+
+    boolean isPair(Card card) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
 }   

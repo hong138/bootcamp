@@ -25,5 +25,8 @@ public enum Rank2 {
     }
     return this.value > rank.getValue() ? 1 : -1;
   }
-  
+  public static void main(String[] args) {
+    // testing
+    System.out.println(Rank2.FOUR.getValue());
+  }
 }
