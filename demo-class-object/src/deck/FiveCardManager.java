@@ -67,27 +67,27 @@ public class FiveCardManager {
                                            new Card(Rank2.FOUR, Suit2.HEART),  
                                            new Card(Rank2.FIVE, Suit2.SPADE), 
                                            new Card(Rank2.SIX, Suit2.SPADE), 
-                                           new Card(Rank2.SEVEN, Suit2.SPADE)).isStraight(); // false
+                                           new Card(Rank2.SEVEN, Suit2.SPADE)).isStraight(); // true
       boolean result2 = new FiveCardManager(new Card(Rank2.THREE, Suit2.SPADE), 
                                             new Card(Rank2.FOUR, Suit2.SPADE),  
                                             new Card(Rank2.FIVE, Suit2.SPADE), 
                                             new Card(Rank2.TEN, Suit2.SPADE), 
-                                            new Card(Rank2.QUEEN, Suit2.SPADE)).isFlush(); // false
+                                            new Card(Rank2.QUEEN, Suit2.SPADE)).isFlush(); // true
       // boolean result3 = new FiveCardManager(new Card(Rank2.THREE, Suit2.DIAMOND), 
       //                                       new Card(Rank2.THREE, Suit2.HEART),  
       //                                       new Card(Rank2.THREE, Suit2.SPADE), 
       //                                       new Card(Rank2.SIX, Suit2.SPADE), 
-      //                                       new Card(Rank2.SIX, Suit2.HEART)).isFullHouse(); // false
+      //                                       new Card(Rank2.SIX, Suit2.HEART)).isFullHouse(); // true
       boolean result4 = new FiveCardManager(new Card(Rank2.KING, Suit2.DIAMOND), 
                                             new Card(Rank2.KING, Suit2.HEART),  
                                             new Card(Rank2.KING, Suit2.SPADE), 
                                             new Card(Rank2.KING, Suit2.CLUB), 
-                                            new Card(Rank2.QUEEN, Suit2.SPADE)).isFourKindAndOne(); // false
+                                            new Card(Rank2.QUEEN, Suit2.SPADE)).isFourKindAndOne(); // true
       boolean result5 = new FiveCardManager(new Card(Rank2.THREE, Suit2.SPADE), 
                                             new Card(Rank2.FOUR, Suit2.SPADE),  
                                             new Card(Rank2.FIVE, Suit2.SPADE), 
                                             new Card(Rank2.SIX, Suit2.SPADE), 
-                                            new Card(Rank2.SEVEN, Suit2.SPADE)).isStraightFlush(); // false
+                                            new Card(Rank2.SEVEN, Suit2.SPADE)).isStraightFlush(); // true
       boolean result6 = new FiveCardManager(new Card(Rank2.THREE, Suit2.DIAMOND), 
                                             new Card(Rank2.QUEEN, Suit2.HEART),  
                                             new Card(Rank2.FIVE, Suit2.SPADE), 

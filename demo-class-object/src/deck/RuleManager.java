@@ -14,8 +14,23 @@ public class RuleManager {
     return new FourKindManager(card1, card2, card3, card4).isFourKind();
   }
 
-  public boolean isFiveCard(Card card1, Card card2, Card card3, Card card4, Card card5){
-    // counting
-    return false;
+  public boolean isStraight(Card card1, Card card2, Card card3, Card card4, Card card5){
+    return new FiveCardManager(card1, card2, card3, card4, card5).isStraight();
+  }
+
+  public boolean isFlush(Card card1, Card card2, Card card3, Card card4, Card card5){
+    return new FiveCardManager(card1, card2, card3, card4, card5).isFlush();
+  }
+
+  // public boolean isFullHouse(Card card1, Card card2, Card card3, Card card4, Card card5){
+  //   return new FiveCardManager(card1, card2, card3, card4, card5).isFullHouse();
+  // }
+
+  public boolean isFourKindAndOne(Card card1, Card card2, Card card3, Card card4, Card card5){
+    return new FiveCardManager(card1, card2, card3, card4, card5).isFourKindAndOne();
+  }
+
+  public boolean isStraightFlush(Card card1, Card card2, Card card3, Card card4, Card card5){
+    return new FiveCardManager(card1, card2, card3, card4, card5).isStraightFlush();
   }
 }
