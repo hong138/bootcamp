@@ -11,9 +11,7 @@ public class Cat extends Animal{
     this.color = color;
   }
   
-  public Cat(){
-
-  }
+  public Cat(){}
 
   public Cat(String color){
     this.color = color;
@@ -27,13 +25,18 @@ public class Cat extends Animal{
     this.eat();
   }
 
+  @Override
+  public void walk(){
+    System.out.println("Cat is walking");
+  }
+
   // implicitly
   public String getName(){
     return super.getName();
   }
 
   public String toString(){
-    return "Cat(" + "name=" + this.getName() + " age=" + this.getAge() + " color=" + this.getColor() + ")";
+    return "Cat(name=" + this.getName() + " age=" + this.getAge() + " color=" + this.getColor() + ")";
   }
 
   public static void main(String[] args) {
@@ -52,12 +55,25 @@ public class Cat extends Animal{
 
     Cat cat2 = new Cat("Yellow");
     System.out.println(cat2.getColor());
+    System.out.println("---------------");
 
     Cat cat3 = new Cat(10, "Peter", "Black");
     System.out.println(cat3.toString());
+    System.out.println("---------------");
 
     Cat cat4 = new Cat();
     cat4.eat();
     System.out.println(cat4);
+    System.out.println("---------------");
+
+    Animal cat5 = new Cat();
+    cat5.walk(); // OK, 
+    System.out.println(cat5);
+    System.out.println("---------------");
+
+    Animal dog = new Dog();
+    dog.walk();
+    System.out.println("---------------");
+
   }
 }

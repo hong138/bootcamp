@@ -1,6 +1,6 @@
 package deck;
 
-public class Card {
+public class Card{
   // !!! Make you know the difference between instance variable, static
   // variable, static final variable
 
@@ -8,6 +8,7 @@ public class Card {
   // "01", "02", "09, "10", "JACK", "QUEEN", "KING"
   private Rank2 rank; // 1, 2, 3, 4, 5, 6, 7, 8, 9, T, J, Q, K
   private Suit2 suit; // DIAMOND, CLUB, HEART, SPADE
+
 
   public Card(Rank2 rank, Suit2 suit) {
     this.rank = rank;
@@ -122,8 +123,10 @@ public class Card {
   }
 
     public String toString(){
-    return "Card(" + "Rank=" + this.rank + ", Suit=" + this.suit + ")";
+    return "Card(Rank=" + this.rank + ", Suit=" + this.suit + ")";
     }
+
+    // abstract int compareTo();
 
   public static void main(String[] args) {
     // valueOf(''), 
@@ -143,14 +146,5 @@ public class Card {
 
     // Card.CLUB = 10; // final variable cannot be modified
   }
-
-  public boolean isPair(Card card) {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'isPair'");
-  }
-
-    boolean isPair(Card card) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
 
 }   

@@ -1,127 +1,56 @@
 package deck;
 
-public class Rank {
-  // static final, static, final, instance variable
-  // Constant (static final) -> should be public
-  public static final char ACE   = 'A';
-  public static final char TWO   = '2';
-  public static final char THREE = '3';
-  public static final char FOUR  = '4';
-  public static final char FIVE  = '5';
-  public static final char SIX   = '6';
-  public static final char SEVEN = '7';
-  public static final char EIGHT = '8';
-  public static final char NINE  = '9';
-  public static final char TEN   = 'T';
-  public static final char JACK  = 'J';
-  public static final char QUEEN = 'Q';
-  public static final char KING  = 'K';
+public enum Rank2 {
+  ACE(12, 'A', "Ace"),
+  TWO(13, '2', "Two"), 
+  THREE(1, '3', "Three"), 
+  FOUR(2, '4', "Four"), 
+  FIVE(3, '5', "Five"), 
+  SIX(4, '6', "Six"), 
+  SEVEN(5, '7', "Seven"), 
+  EIGHT(6, '8', "Eight"), 
+  NINE(7, '9', "Nine"), 
+  TEN(8, 'T', "Ten"), 
+  JACK(9, 'J', "Jack"), 
+  QUEEN(10, 'Q', "Queen"), 
+  KING(11, 'K', "King");
 
-  // final instance variable
-  private final String name = "ABC"; // every Rank Object has name attribute
+  private final int value;
+  private final char c;
+  private final String s;
 
-  private char value;
-
-  public Rank(char value) {
+  private Rank2 (int value, char c, String s){
     this.value = value;
+    this.c = c;
+    this.s = s;
   }
 
-  public static Rank ofACE(){
-    return new Rank(ACE);
-  }
-
-  public static Rank ofTWO(){
-    return new Rank(TWO);
-  }
-
-  public static Rank ofTHREE(){
-    return new Rank(THREE);
-  }
-
-  public static Rank ofFOUR(){
-    return new Rank(FOUR);
-  }
-
-  public static Rank ofFIVE(){
-    return new Rank(FIVE);
-  }
-
-  public static Rank ofSIX(){
-    return new Rank(SIX);
-  }
-
-  public static Rank ofSEVEN(){
-    return new Rank(SEVEN);
-  }
-
-  public static Rank ofEIGHT(){
-    return new Rank(EIGHT);
-  }
-
-  public static Rank ofNINE(){
-    return new Rank(NINE);
-  }
-
-  public static Rank ofTEN(){
-    return new Rank(TEN);
-  }
-
-  public static Rank ofJACK(){
-    return new Rank(JACK);
-  }
-
-  public static Rank ofQUEEN(){
-    return new Rank(QUEEN);
-  }
-
-  public static Rank ofKING(){
-    return new Rank(KING);
-  }
-
-  public char getValue() {
+  public int getValue(){
     return this.value;
   }
 
-  public boolean equals(Rank rank){
-    if (this == rank){
-      return true;
-    }
-    return false;
+  public char getChar(){
+    return this.c;
   }
 
-  public String toString(){
-    return "(" + this.value + ")";
-    }
+  public String getString(){
+    return this.s;
+  }
 
-  public int compareTo(Rank rank) {
-    // Early return
-    if (this.value != rank.getValue()) {
-      if (this.value == TWO)
-        return 1;
-      if (rank.getValue() == TWO)
-        return -1;
-      if (this.value == ACE)
-        return 1;
-      if (rank.getValue() == ACE)
-        return -1;
-      if (this.value == KING)
-        return 1;
-      if (rank.getValue() == KING)
-        return -1;
-      if (this.value == QUEEN)
-        return 1;
-      if (rank.getValue() == QUEEN)
-        return -1;
-      if (this.value == JACK)
-        return 1;
-      if (rank.getValue() == JACK)
-        return -1;
-      if (this.value == TEN)
-        return 1;
-      if (rank.getValue() == TEN)
-        return -1;
-      return this.value > rank.getValue() ? 1 : -1; // 3 - 9
+  public static int length(){
+    // values()
+    return Rank2.values().length;
+  }
+
+  public int compare(Rank2 rank){
+    if (this == rank){
+      return 0;
     }
-    return 0;
+    return this.value > rank.getValue() ? 1 : -1;
+  }
+  
+  public static void main(String[] args) {
+    // testing
+    System.out.println(Rank2.FOUR.getValue());
   }
 }

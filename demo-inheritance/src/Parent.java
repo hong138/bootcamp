@@ -22,4 +22,8 @@ public class Parent {
   public int getX(){
     return this.x;
   }
+
+  public void sleep(){
+    
+  }
 }

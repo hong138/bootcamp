@@ -2,8 +2,8 @@ package deck;
 
 import java.util.Arrays;
 
-public class FiveCardManager {
-  private final Card[] cards;
+public class FiveCardManager extends RuleManager{
+  // private final Card[] cards;
 
   public FiveCardManager(Card card1, Card card2, Card card3, Card card4, Card card5){
     this.cards = new Card[] {card1, card2, card3, card4, card5};

@@ -1,10 +1,10 @@
 package deck;
 
-public class PairManager {
+public class PairManager{
+  private final Card[] cards;
   public static boolean isPair;
   // !!! final -> Card array object reference, but you can still change the card object
   // !!! unless you provide setter to revise the card object
-  private final Card[] cards;
 
   public PairManager(Card card1, Card card2){
     this.cards = new Card[] {card1, card2};

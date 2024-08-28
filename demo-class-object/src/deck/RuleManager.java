@@ -1,7 +1,12 @@
 package deck;
 
 public class RuleManager {
-  
+  public final Card[] cards;
+
+    public RuleManager(Card[] cards) {
+        this.cards = cards;
+    }
+
   public boolean isPair(Card card1, Card card2){
     return new PairManager(card1, card2).isPair();
   }
@@ -33,4 +38,6 @@ public class RuleManager {
   public boolean isStraightFlush(Card card1, Card card2, Card card3, Card card4, Card card5){
     return new FiveCardManager(card1, card2, card3, card4, card5).isStraightFlush();
   }
+
+  // abstract int compareTo();
 }
