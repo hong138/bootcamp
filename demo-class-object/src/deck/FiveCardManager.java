@@ -19,7 +19,7 @@ public class FiveCardManager extends RuleManager{
   }
 
   public boolean isFlush(){
-  Suit2 firstSuit = cards[0].getSuit();
+  Suit firstSuit = cards[0].getSuit();
   for (int i = 1; i < 5; i++) {
     if (!cards[i].getSuit().equals(firstSuit)) {
       return false;
@@ -39,7 +39,7 @@ public class FiveCardManager extends RuleManager{
   // }
 
   public boolean isFourKindAndOne(){
-  Arrays.sort(Rank2.values());
+  Arrays.sort(Rank.values());
   if (cards[0].getRank().equals(cards[1].getRank()) &&
       cards[1].getRank().equals(cards[2].getRank()) &&
       cards[2].getRank().equals(cards[3].getRank()) &&
@@ -63,36 +63,36 @@ public class FiveCardManager extends RuleManager{
     }
 
     public static void main(String[] args) {
-      boolean result = new FiveCardManager(new Card(Rank2.THREE, Suit2.DIAMOND), 
-                                           new Card(Rank2.FOUR, Suit2.HEART),  
-                                           new Card(Rank2.FIVE, Suit2.SPADE), 
-                                           new Card(Rank2.SIX, Suit2.SPADE), 
-                                           new Card(Rank2.SEVEN, Suit2.SPADE)).isStraight(); // true
-      boolean result2 = new FiveCardManager(new Card(Rank2.THREE, Suit2.SPADE), 
-                                            new Card(Rank2.FOUR, Suit2.SPADE),  
-                                            new Card(Rank2.FIVE, Suit2.SPADE), 
-                                            new Card(Rank2.TEN, Suit2.SPADE), 
-                                            new Card(Rank2.QUEEN, Suit2.SPADE)).isFlush(); // true
+      boolean result = new FiveCardManager(new Card(Rank.THREE, Suit.DIAMOND), 
+                                           new Card(Rank.FOUR, Suit.HEART),  
+                                           new Card(Rank.FIVE, Suit.SPADE), 
+                                           new Card(Rank.SIX, Suit.SPADE), 
+                                           new Card(Rank.SEVEN, Suit.SPADE)).isStraight(); // true
+      boolean result2 = new FiveCardManager(new Card(Rank.THREE, Suit.SPADE), 
+                                            new Card(Rank.FOUR, Suit.SPADE),  
+                                            new Card(Rank.FIVE, Suit.SPADE), 
+                                            new Card(Rank.TEN, Suit.SPADE), 
+                                            new Card(Rank.QUEEN, Suit.SPADE)).isFlush(); // true
       // boolean result3 = new FiveCardManager(new Card(Rank2.THREE, Suit2.DIAMOND), 
       //                                       new Card(Rank2.THREE, Suit2.HEART),  
       //                                       new Card(Rank2.THREE, Suit2.SPADE), 
       //                                       new Card(Rank2.SIX, Suit2.SPADE), 
       //                                       new Card(Rank2.SIX, Suit2.HEART)).isFullHouse(); // true
-      boolean result4 = new FiveCardManager(new Card(Rank2.KING, Suit2.DIAMOND), 
-                                            new Card(Rank2.KING, Suit2.HEART),  
-                                            new Card(Rank2.KING, Suit2.SPADE), 
-                                            new Card(Rank2.KING, Suit2.CLUB), 
-                                            new Card(Rank2.QUEEN, Suit2.SPADE)).isFourKindAndOne(); // true
-      boolean result5 = new FiveCardManager(new Card(Rank2.THREE, Suit2.SPADE), 
-                                            new Card(Rank2.FOUR, Suit2.SPADE),  
-                                            new Card(Rank2.FIVE, Suit2.SPADE), 
-                                            new Card(Rank2.SIX, Suit2.SPADE), 
-                                            new Card(Rank2.SEVEN, Suit2.SPADE)).isStraightFlush(); // true
-      boolean result6 = new FiveCardManager(new Card(Rank2.THREE, Suit2.DIAMOND), 
-                                            new Card(Rank2.QUEEN, Suit2.HEART),  
-                                            new Card(Rank2.FIVE, Suit2.SPADE), 
-                                            new Card(Rank2.ACE, Suit2.SPADE), 
-                                            new Card(Rank2.SEVEN, Suit2.SPADE)).isStraight(); // false
+      boolean result4 = new FiveCardManager(new Card(Rank.KING, Suit.DIAMOND), 
+                                            new Card(Rank.KING, Suit.HEART),  
+                                            new Card(Rank.KING, Suit.SPADE), 
+                                            new Card(Rank.KING, Suit.CLUB), 
+                                            new Card(Rank.QUEEN, Suit.SPADE)).isFourKindAndOne(); // true
+      boolean result5 = new FiveCardManager(new Card(Rank.THREE, Suit.SPADE), 
+                                            new Card(Rank.FOUR, Suit.SPADE),  
+                                            new Card(Rank.FIVE, Suit.SPADE), 
+                                            new Card(Rank.SIX, Suit.SPADE), 
+                                            new Card(Rank.SEVEN, Suit.SPADE)).isStraightFlush(); // true
+      boolean result6 = new FiveCardManager(new Card(Rank.THREE, Suit.DIAMOND), 
+                                            new Card(Rank.QUEEN, Suit.HEART),  
+                                            new Card(Rank.FIVE, Suit.SPADE), 
+                                            new Card(Rank.ACE, Suit.SPADE), 
+                                            new Card(Rank.SEVEN, Suit.SPADE)).isStraight(); // false
         
         System.out.println(result);
         System.out.println(result2);

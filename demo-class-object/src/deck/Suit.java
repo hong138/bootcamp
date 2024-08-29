@@ -1,75 +1,80 @@
 package deck;
 
-public enum Suit2 {
-  // create enum object
-  // DIAMOND, // call emtry constructor
-  DIAMOND(1), //
-  CLUB(2), //
-  HEART(3), //
-  SPADE(4), //
-  ;
+public class Suit {
+  // Constant (static final)
+  // Integer.MIN_VALUE -> constant
+  public static final int DIAMOND = 1;
+  public static final int CLUB = 2;
+  public static final int HEART = 3;
+  public static final int SPADE = 4;
 
-  private final int value;
+  // static variable
 
-  private Suit2 (int value){
+  // instance variable
+  private int value;
+
+  // no public constructor
+  private Suit(int value) {
     this.value = value;
   }
 
-  public int getValue(){
+  // static method
+  public static Suit valueOf(int value) {
+    return new Suit(value);
+  }
+
+  public static Suit ofDiamond() {
+    return new Suit(DIAMOND);
+  }
+
+  public static Suit ofClub() {
+    return new Suit(CLUB);
+  }
+
+  public static Suit ofHeart() {
+    return new Suit(HEART);
+  }
+
+  public static Suit ofSpade() {
+    return new Suit(SPADE);
+  }
+
+  // instance method
+  public int getValue() {
     return this.value;
   }
 
-  // 
-  public int compare(Suit2 suit){
-    // this vs suit
-    if (this == suit){
+  public boolean isDiamond() {
+    return this.value == DIAMOND;
+  }
+
+  public boolean isClub() {
+    return this.value == CLUB;
+  }
+
+  public boolean isHeart() {
+    return this.value == HEART;
+  }
+
+  public boolean isSpade() {
+    return this.value == SPADE;
+  }
+
+  public int compareTo(Suit suit) {
+    if (this.value == suit.getValue())
       return 0;
-    }
     return this.value > suit.getValue() ? 1 : -1;
   }
 
-  public static int length(){
-    // values()
-    return Suit2.values().length;
-  }
-
-  // values() method is implicitly created by JAVA when the class is enum
-  public static Suit2 get(int value){
-    for (Suit2 suit : Suit2.values()){
-      if (suit.getValue() == value){
-        return suit;
-      }
-    }
-    return null;
+  public String toString() {
+    return "Suit(" //
+        + "value=" + this.value //
+        + ")";
   }
 
   public static void main(String[] args) {
-    // Load classes to Memory
-    // enum -> create objects for enum
-    // static/ static final
-    // start to read your code in main method
-
-    System.out.println(Suit2.CLUB.compare(Suit2.DIAMOND)); // 1
-
-    // enum.class compareTo() by default checking address
-    System.out.println(Suit2.CLUB.compareTo(Suit2.DIAMOND)); // 1
-    System.out.println(Suit2.CLUB.compareTo(Suit2.CLUB)); // 0
-    System.out.println(Suit2.CLUB.compareTo(Suit2.HEART)); // -1
-    System.out.println(Suit2.CLUB.compareTo(Suit2.SPADE));  // -2
-
-    // equals() -> result OK
-    Suit2 unknown = Suit2.HEART;
-    System.out.println(unknown.equals(Suit2.HEART)); // true
-    System.out.println(unknown == Suit2.HEART); // true
-    System.out.println(unknown != Suit2.HEART); // false
-
-    System.out.println(Suit2.HEART.getValue()); // 3
-
-    // name()
-    System.out.println(Suit2.DIAMOND.name()); // "DIAMOND"
-    System.out.println(Suit2.DIAMOND.toString()); // "DIAMOND"
-
-    // ordinal() -> index ordering (start from 0)
-    System.out.println(Suit2.HEART.ordinal()); // 2 (index)
+    // card.getSuit().getValue() == 1
+    // if (card.getSuit().isDiamond())
+    System.out.println(2 % 6);
   }
 }

@@ -12,10 +12,10 @@ public class TriplesManager {
     }
 
   public static void main(String[] args) {
-    boolean result = new TriplesManager(new Card(Rank2.ACE, Suit2.DIAMOND), new Card(Rank2.THREE, Suit2.HEART), new Card(Rank2.TWO, Suit2.SPADE)).isTriples(); // false
-    boolean result2 = new TriplesManager(new Card(Rank2.TWO, Suit2.DIAMOND), new Card(Rank2.TWO, Suit2.HEART), new Card(Rank2.TWO, Suit2.SPADE)).isTriples(); // true
-    boolean result3 = new TriplesManager(new Card(Rank2.NINE, Suit2.DIAMOND), new Card(Rank2.THREE, Suit2.DIAMOND), new Card(Rank2.TWO, Suit2.SPADE)).isTriples(); // false
-    boolean result4 = new TriplesManager(new Card(Rank2.FIVE, Suit2.DIAMOND), new Card(Rank2.FIVE, Suit2.DIAMOND), new Card(Rank2.FIVE, Suit2.SPADE)).isTriples(); // true
+    boolean result = new TriplesManager(new Card(Rank.ACE, Suit.DIAMOND), new Card(Rank.THREE, Suit.HEART), new Card(Rank.TWO, Suit.SPADE)).isTriples(); // false
+    boolean result2 = new TriplesManager(new Card(Rank.TWO, Suit.DIAMOND), new Card(Rank.TWO, Suit.HEART), new Card(Rank.TWO, Suit.SPADE)).isTriples(); // true
+    boolean result3 = new TriplesManager(new Card(Rank.NINE, Suit.DIAMOND), new Card(Rank.THREE, Suit.DIAMOND), new Card(Rank.TWO, Suit.SPADE)).isTriples(); // false
+    boolean result4 = new TriplesManager(new Card(Rank.FIVE, Suit.DIAMOND), new Card(Rank.FIVE, Suit.DIAMOND), new Card(Rank.FIVE, Suit.SPADE)).isTriples(); // true
 
     System.out.println(result);
     System.out.println(result2);

@@ -16,18 +16,3 @@ Meanwhile, the compiled output files will be generated in the `bin` folder by de
 ## Dependency Management
 
 The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
-
-
-1.static final ->pi 3.14159...
-final -> use it yourself only ,
-
- public -> can share ,
-  private -> can not share 
-
-2.void , no return keywords
-System.out.println() 
-
-3.static 
-int a = 10;
-all file -> class 
-every class use this static variable 

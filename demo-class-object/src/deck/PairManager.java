@@ -18,10 +18,10 @@ public class PairManager{
 
   public static void main(String[] args) {
     
-    boolean result = new PairManager(new Card(Rank2.ACE, Suit2.DIAMOND), new Card(Rank2.THREE, Suit2.HEART)).isPair(); // false
-    boolean result2 = new PairManager(new Card(Rank2.TWO, Suit2.DIAMOND), new Card(Rank2.TWO, Suit2.HEART)).isPair(); // true
-    boolean result3 = new PairManager(new Card(Rank2.NINE, Suit2.DIAMOND), new Card(Rank2.THREE, Suit2.DIAMOND)).isPair(); // false
-    boolean result4 = new PairManager(new Card(Rank2.FIVE, Suit2.DIAMOND), new Card(Rank2.FIVE, Suit2.DIAMOND)).isPair(); // true
+    boolean result = new PairManager(new Card(Rank.ACE, Suit.DIAMOND), new Card(Rank.THREE, Suit.HEART)).isPair(); // false
+    boolean result2 = new PairManager(new Card(Rank.TWO, Suit.DIAMOND), new Card(Rank.TWO, Suit.HEART)).isPair(); // true
+    boolean result3 = new PairManager(new Card(Rank.NINE, Suit.DIAMOND), new Card(Rank.THREE, Suit.DIAMOND)).isPair(); // false
+    boolean result4 = new PairManager(new Card(Rank.FIVE, Suit.DIAMOND), new Card(Rank.FIVE, Suit.DIAMOND)).isPair(); // true
 
     System.out.println(result);
     System.out.println(result2);

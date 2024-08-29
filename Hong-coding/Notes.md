@@ -125,3 +125,18 @@ final（屬於物件）：這表示定義的變數是一個常數，其值在對
 
 實例變數（非靜態，非 final）：這表示定義的變數是屬於類的實例的一部分，每個類的實例都有自己的一組實例變數。這些變數的值可以因實例的不同而不同，並且可以在對象的整個生命週期中更改。
 這些不同的關鍵字和修飾符在Java中用於不同的情況和目的，了解它們之間的區別有助於編寫更具結構性和清晰性的程式碼。如果您有任何其他問題或需要進一步的解釋，請隨時提出！
+
+
+1.static final ->pi 3.14159...
+final -> use it yourself only ,
+
+ public -> can share ,
+  private -> can not share 
+
+2.void , no return keywords
+System.out.println() 
+
+3.static 
+int a = 10;
+all file -> class 
+every class use this static variable 

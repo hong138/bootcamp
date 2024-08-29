@@ -13,18 +13,18 @@ public class FourKindManager {
     }
 
     public static void main(String[] args) {
-        boolean result = new FourKindManager(new Card(Rank2.ACE, Suit2.DIAMOND), 
-                                             new Card(Rank2.THREE, Suit2.HEART),  
-                                             new Card(Rank2.TWO, Suit2.SPADE), 
-                                             new Card(Rank2.FOUR, Suit2.SPADE)).isFourKind(); // false
-        boolean result2 = new FourKindManager(new Card(Rank2.TWO, Suit2.DIAMOND), 
-                                              new Card(Rank2.TWO, Suit2.HEART),   
-                                              new Card(Rank2.TWO, Suit2.SPADE), 
-                                              new Card(Rank2.TWO, Suit2.CLUB)).isFourKind(); // true
-        boolean result3 = new FourKindManager(new Card(Rank2.NINE, Suit2.DIAMOND), 
-                                              new Card(Rank2.THREE, Suit2.DIAMOND), 
-                                              new Card(Rank2.TWO, Suit2.DIAMOND), 
-                                              new Card(Rank2.TEN, Suit2.DIAMOND)).isFourKind(); // false
+        boolean result = new FourKindManager(new Card(Rank.ACE, Suit.DIAMOND), 
+                                             new Card(Rank.THREE, Suit.HEART),  
+                                             new Card(Rank.TWO, Suit.SPADE), 
+                                             new Card(Rank.FOUR, Suit.SPADE)).isFourKind(); // false
+        boolean result2 = new FourKindManager(new Card(Rank.TWO, Suit.DIAMOND), 
+                                              new Card(Rank.TWO, Suit.HEART),   
+                                              new Card(Rank.TWO, Suit.SPADE), 
+                                              new Card(Rank.TWO, Suit.CLUB)).isFourKind(); // true
+        boolean result3 = new FourKindManager(new Card(Rank.NINE, Suit.DIAMOND), 
+                                              new Card(Rank.THREE, Suit.DIAMOND), 
+                                              new Card(Rank.TWO, Suit.DIAMOND), 
+                                              new Card(Rank.TEN, Suit.DIAMOND)).isFourKind(); // false
 
         System.out.println(result);
         System.out.println(result2);
