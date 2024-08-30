@@ -140,3 +140,6 @@ System.out.println()
 int a = 10;
 all file -> class 
 every class use this static variable 
+
+- ArrayList
+- Week 2 - Week 5

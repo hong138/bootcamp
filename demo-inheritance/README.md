@@ -34,3 +34,7 @@
     -When re-assign the object to a lower level type of reference, the object behavior may be different.
   -Run-time (Dynamic Polymorphism)
     -method implementation belongs to object itself (but not the reference type)
+
+-Why do we need Inheritance + Polymorphism?
+  - 1. abstract class type can be used in method parameter (i.e. Shape[] -> area)
+  - 2. abstract class type can be an attribute of a class (i.e. Rank is an attribute of Card)
