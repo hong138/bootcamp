@@ -31,5 +31,14 @@ public class DemoSet {
     strings.add("abc");
     strings.add("abc");
     System.out.println(strings.size()); // 2
+
+    // ArrayList vs HashSet
+    // Same:
+    // 1. HashSet has NO ordering
+    // 2. Add/ remove -> array -> recreate array object
+
+    // Different:
+    // 1. Polymorphism -> different implementation -> add() -> return false if duplicated
+    // 2. Searching by hash code to find out duplicated
   }
 }
