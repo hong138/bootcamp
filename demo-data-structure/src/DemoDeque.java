@@ -16,9 +16,9 @@ public class DemoDeque {
     strings.remove(); // remove head
     System.out.println(strings); // [abc, def, ghi, aaa]
     strings.removeFirst();
-    System.out.println(strings);
+    System.out.println(strings); // [def, ghi, aaa]
     strings.removeLast();
-    System.out.println(strings);
+    System.out.println(strings); // [def, ghi]
     
   }
 }

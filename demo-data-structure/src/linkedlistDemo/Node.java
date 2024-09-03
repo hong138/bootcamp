@@ -1,54 +1,42 @@
 package linkedlistDemo;
 
-  // similar to Box
-  // List(Customer)
-  // Customer.class -> name, age
-
-public class Node{
+// Similar to Box
+// List<Customer> = new LinkedList<Customer>();
+// Customer.class -> name, age
+public class Node {
   private Node next;
-  private Customer2 customer;
+  private Customer customer;
 
-  public Node(Customer2 customer){
+  public Node(Customer customer) {
     this.customer = customer;
   }
 
-  public Node(Node next,Customer2 customer){
+  public Node(Customer customer, Node next) {
+    this.customer = customer;
     this.next = next;
-    this.customer = customer;
   }
 
-  public Node getNext(){
+  public Node getNext() {
     return this.next;
   }
 
-  public Customer2 getCustomer(){
+  public Customer getCustomer() {
     return this.customer;
   }
 
-  public int get(int index){
-    int count = 0;
-    Node head = this.next;
-    while (head != null){
-      if(++count > index){
-        return this.value;
-      }
-      head = head.next;
-    }
-    return -1;
+  public void setCustomer(Customer customer) {
+    this.customer = customer;
   }
 
-  public Node getTail(){
-    Node head = this;
-    while (head.next != null){
-      head = head.next;
-    }
-    return head;
+  public void setNext(Node next) {
+    this.next = next;
   }
 
-  public String toString(){
+  @Override
+  public String toString() {
     Node head = this;
     StringBuilder sb = new StringBuilder("Customers[");
-    while (head != null){
+    while (head != null) {
       sb.append(head.getCustomer());
       head = head.next;
       sb.append(",");
@@ -57,7 +45,9 @@ public class Node{
   }
 
   public static void main(String[] args) {
-  Node customer = new Node(new Customer2("Peter", 30));
-  System.out.println(customer);
+    Node head = null;
+    System.out.println(head); 
+    head = new Node(new Customer("John", 10)); 
+    System.out.println(head); // Customers[Customer(name=John, age=10)]
   }
 }
