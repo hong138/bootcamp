@@ -1,14 +1,15 @@
 package sorting.formula;
 
-public class BoxSorts{
+public class BoxSorts {
 
-  private BoxSorts;
-  // return interface type
-  public static BoxSort asc(){
+  private BoxSorts() {}
+
+  // retrun interface type
+  public static BoxSort ofAsc() {
     return new BoxSortByIntAsc();
   }
 
-  public static BoxSort desc(){
+  public static BoxSort ofDesc() {
     return new BoxSortByIntDesc();
   }
 }

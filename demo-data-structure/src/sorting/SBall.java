@@ -38,12 +38,17 @@ public class SBall implements Comparable<SBall>{
   // }
 
   @Override
-  public int compareTo(SBall sball) {
-    if (this.color.compareTo(sball.getColor()) != 0) {
-      return this.color.compareTo(sball.getColor());
-  } else {
-      return sball.getName().compareTo(this.name);
-  }
+  public int compareTo(SBall ball) {
+    if (this.color == ball.getColor()){
+      return this.name.compareTo(ball.getName());
+    } else {
+
+    }
+  //   if (this.color.compareTo(sball.getColor()) != 0) {
+  //     return this.color.compareTo(sball.getColor());
+  // } else {
+  //     return sball.getName().compareTo(this.name);
+  // }
 }
 
   @Override
@@ -67,10 +72,10 @@ public class SBall implements Comparable<SBall>{
     balls.add(new SBall(Color.GREEN, "Susan"));
     balls.add(new SBall(Color.PINK, "Peter"));
     balls.add(new SBall(Color.ORANGE, "Katie"));
-    System.out.println(balls);
+    System.out.println(balls); // [(RED, Vincent), (YELLOW, Benny), (RED, Alex), (YELLOW, John), (GREEN, Susan), (PINK, Peter), (ORANGE, Katie)]
 
     Collections.sort(balls);
-    System.out.println(balls);
+    System.out.println(balls); // [(YELLOW, John), (YELLOW, Benny), (GREEN, Susan), (RED, Vincent), (RED, Alex), (ORANGE, Katie), (PINK, Peter)]
 
     // balls.colorAsc();
   }
