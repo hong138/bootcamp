@@ -143,3 +143,25 @@ every class use this static variable
 
 - ArrayList
 - Week 2 - Week 5
+
+  @Override
+  public String toString(){
+    return "Staff(name=" + this.name + ")";
+  }
+
+  @Override 
+  public boolean equals(Object obj){ // same name -> true, otherwise false
+    if (this == obj)
+      return true;
+    if (!(obj instanceof Staff2)) // before downcast, we usually conside to use "instanceof"
+      return false;
+    // because we do not have staff object, so we cannot getName()
+    // Parent -> Child (downcast);
+    Staff2 staff = (Staff2) obj;
+    return Objects.equals(this.name, staff.getName()) && Objects.equals(this.joinDate, staff.getJoinDate());
+  }
+
+  @Override
+  public int hashCode(){
+    return Objects.hash(this.name, this.joinDate);
+  }

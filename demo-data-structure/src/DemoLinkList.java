@@ -19,5 +19,16 @@ public class DemoLinkList {
       }
       return -1;
     }
+
+    // Total Time Complexity: 0(n) + 0(1) -> 0(n)
+    public static List<String> get(int[] arr){
+      // Time Complexity -> 0(n)
+      // 0(n^2)
+      for (int i = 0; i < arr.length; i++) {
+          for (int j = 0; j < arr.length; j++) {
+          }
+      }
+      
+    }
   }
 }
