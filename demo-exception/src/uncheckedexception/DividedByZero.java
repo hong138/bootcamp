@@ -1,3 +1,4 @@
+package uncheckedexception;
 public class DividedByZero {
     public static void main(String[] args) throws Exception {
       int x = 10 / 2;
