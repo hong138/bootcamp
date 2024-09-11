@@ -1,15 +1,27 @@
 public class Ball {
   private Ball.Color color;
 
-  public Ball(Color color){
+  private Ball(Color color) {
     this.color = color;
   }
 
-  private enum Color{
-    RED, GREEN, BLUE;
+  public static Ball ofRed() {
+    return new Ball(Color.RED);
   }
 
-  public enum Size{
-    SMALL, MEDIUM, LARGE;
+  public Color getColor() {
+    return this.color;
+  }
+
+  public boolean isRed() {
+    return this.color == Color.RED;
+  }
+
+  private enum Color {
+    RED, GREEN, BLUE,;
+  }
+
+  public enum Size {
+    SMALL, MEDIUM, LARGE,;
   }
 }

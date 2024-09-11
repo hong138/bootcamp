@@ -15,7 +15,6 @@ public class ExceptionChainExample5 {
     } catch (ArithmeticException e) {
       throw new RuntimeException(); // re-throw another exception
     }
-      
   }
 
   public static int method2(int x, int y){

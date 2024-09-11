@@ -1,8 +1,7 @@
 public class ExceptionChainExample3 {
   // !!! No Exception
   public static void main(String[] args) {
-    method1(10, 0); // If there is no one handling the exception along the call stack
-    // Finally, main() method will throw the exception to JVM.
+    method1(10, 0); 
   }
 
   public static int method1(int x, int y){

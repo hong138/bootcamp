@@ -37,7 +37,7 @@ public enum Color {
     // Meaningless
     try {
         concat(null, "abc");
-    } catch (IllegalArgumentException e) {
+    } catch (NullPointerException e) {
       System.out.println(e.getMessage());
     }
   }

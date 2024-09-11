@@ -1,53 +1,55 @@
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-
 // !!! Type K can be same as Type V
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class SuperMap<K, V> {
   private List<SuperEntry<K, V>> entries;
 
-  public SuperMap(){
-    this.entries = new LinkedList<>();
+  public SuperMap() {
+    this.entries = new ArrayList<>();
   }
 
-  private SuperEntry<K, V> getEntry(K key){
-    // if not found, return null
-    if (key == null) return null;
-    for (SuperEntry<K, V> entry:this.entries){
-      if (key.equals(entry.getKey()))
-        return entry;
-      }
-      return null;
-    }
-
-    public V get(K key){
-      SuperEntry<K, V> entry = this.getEntry(key);
-      return entry == null ? null : entry.getValue();
-    }
-  
-
-  public void put(K key, V value){
-    // check if not duplicate
-    if (this.getEntry(key) == null){
+  public void put(K key, V value) {
+    // if not duplicate
+    SuperEntry<K, V> entry = this.getEntry(key);
+    if (entry == null) {
       this.entries.add(new SuperEntry<>(key, value));
       return;
     }
-    // check if duplicate
+    // if duplicated
     entry.setValue(value);
-    
   }
 
-  public int size(){
+  public V get(K key) {
+    SuperEntry<K, V> entry = this.getEntry(key);
+    return entry == null ? null : entry.getValue();
+  }
+
+  public int size() {
     return this.entries.size();
+  }
+
+  // Get Entry by key
+  private SuperEntry<K, V> getEntry(K key) {
+    // if not found, return null
+    if (key == null)
+      return null;
+    for (SuperEntry<K, V> entry : this.entries) {
+      if (key.equals(entry.getKey()))
+        return entry;
+    }
+    return null;
   }
 
   public static void main(String[] args) {
     SuperMap<String, String> nameMap = new SuperMap<>();
-    nameMap.put("John", "apple");
-    nameMap.put("Vincent", "orange");
-    System.out.println(nameMap.get("john"));
-    nameMap.put("John", "banana");
-    System.out.println(nameMap.get("john"));
-    System.out.println(nameMap.size());
+    nameMap.put("john", "apple");
+    nameMap.put("vincent", "orange");
+    System.out.println(nameMap.get("john")); // apple
+    nameMap.put("john", "banana");
+    System.out.println(nameMap.get("john")); // banana
+    System.out.println(nameMap.size()); // 2
+
   }
 }

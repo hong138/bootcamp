@@ -12,6 +12,7 @@ public class DemoHashMap {
     map.put(15, "Mary");
     map.put(38, "Ken");
     map.put(25, "Aaron");
+    
     // map.put("Peter", 10); // Wrong type of value object
 
     System.out.println(map);

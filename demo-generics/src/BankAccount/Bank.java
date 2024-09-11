@@ -22,5 +22,6 @@ public class Bank {
     Bank bank = new Bank();
     // Add Saving Account
     System.out.println(bank.sumOfBalance(AccountType.SAVING));
+    bank.add(new SavingAccount());
   }
 }

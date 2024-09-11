@@ -12,10 +12,5 @@ public class SavingAccount {
     super(ACC_PREFIX);
   }
 
-  // @Override
-  // public double getBalance() {
-  //   if (super.getBalance() > 1_000_000)
-  //     System.out.println("The balance > 1,000,000.");
-  //   return super.getBalance();
-  // }
+  // handle attribute owner
 }

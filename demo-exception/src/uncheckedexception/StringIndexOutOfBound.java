@@ -1,3 +1,4 @@
+package uncheckedexception;
 public class StringIndexOutOfBound {
   public static void main(String[] args) {
     // char[]

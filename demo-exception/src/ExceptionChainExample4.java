@@ -7,8 +7,6 @@ public class ExceptionChainExample4 {
     } catch (ArithmeticException e) {
       result = -1;
     }
-    // If there is no one handling the exception along the call stack
-    // Finally, main() method will throw the exception to JVM.
   }
 
   public static int method1(int x, int y){
