@@ -3,5 +3,6 @@ public abstract class Sofa extends Furniture{
 
   // public Sofa(int price, int quantity) {
   //   super(price, quantity);
-  // }
+  // }    
+  
 }

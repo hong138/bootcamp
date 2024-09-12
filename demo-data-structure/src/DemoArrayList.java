@@ -48,8 +48,8 @@ public class DemoArrayList{
 
     // !!! you should think of the scenario of without equals() in Customer.class
     // new ArrayList<Customer>() -> constructor
-    ArrayList<Customer> customers = new ArrayList<Customer>();
-    Customer john = new Customer("John");
+    ArrayList<Customer2> customers = new ArrayList<Customer2>();
+    Customer2 john = new Customer2("John");
 
     customers.add(john);
     customers.add(john);
@@ -60,7 +60,7 @@ public class DemoArrayList{
     customers.add(john);
     System.out.println(customers.size()); // 2
 
-    ArrayList<Customer> targetRemoveList = new ArrayList<>();
+    ArrayList<Customer2> targetRemoveList = new ArrayList<>();
     targetRemoveList.add(john);
 
     customers.removeAll(targetRemoveList); // -> Customer.equals()

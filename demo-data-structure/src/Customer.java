@@ -20,11 +20,11 @@ public class Customer {
   public boolean equals(Object obj){ // same name -> true, otherwise false
     if (this == obj)
       return true;
-    if (!(obj instanceof Customer)) // before downcast, we usually conside to use "instanceof"
+    if (!(obj instanceof Customer2)) // before downcast, we usually conside to use "instanceof"
       return false;
     // because we do not have staff object, so we cannot getName()
     // Parent -> Child (downcast);
-    Customer customer = (Customer) obj;
+    Customer2 customer = (Customer2) obj;
     return Objects.equals(this.name, customer.getName());
   }
 

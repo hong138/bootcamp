@@ -19,10 +19,10 @@ public class CheckoutManager {
     Inventory inventory = new Inventory();
     inventory.add(Style.MODERN, Type.CHAIR);
     inventory.add(Style.VICTORIAN, Type.CHAIR);
-    // inventory.add(Style.VICTORIAN, Type.SOFA);
+    inventory.add(Style.VICTORIAN, Type.SOFA);
     inventory.add(Style.VICTORIAN, Type.SOFA);
     inventory.add(Style.MODERN, Type.SOFA);
-    // System.out.println(inventory.getQuantity(Type.SOFA)); // 3
+    System.out.println(inventory.getQuantity(Type.SOFA)); // 3
     System.out.println(inventory.getQuantity(Type.CHAIR)); // 2
 
     // !!! open-close
