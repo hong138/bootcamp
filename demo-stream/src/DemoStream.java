@@ -26,6 +26,7 @@ public class DemoStream {
     // !!! Convert List to Stream
     List<Customer2> customers2 = Arrays.asList(new Customer2("Alice", 18), new Customer2("Bob", 20));
     Stream<Customer2> customerStream = customers2.stream();
+    
     // !!! Convert Stream to List
     List<Customer2> customer3 = customerStream.collect(Collectors.toList());
 
@@ -39,7 +40,7 @@ public class DemoStream {
     // Stream Objects -> map() + collect()
     // similar to for-loop + new ArrayList() + add()
     List<String> names = customers2.stream()                 // return Stream<Customer2>
-                        .map(c -> c.getName()) // !!! return Stream<String>
+                        .map(c -> c.getName())               // !!! return Stream<String>
                         .collect(Collectors.toList());       // !!! return List<String>
     System.out.println(names); // [Alice, Bob]
 
