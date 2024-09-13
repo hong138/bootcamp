@@ -57,10 +57,11 @@ public class JavaExercise {
                                    .filter(c -> c.getSalary() > 50000)
                                    .map(c -> c.getName())
                                    .collect(Collectors.toList());
-    System.out.println(salaryFilterOut);
+    System.out.println(salaryFilterOut); // [John, Jane]
 
 
     // 9. Grouping and Collecting to a Map (Group by Age)
+    
 
 
     // 10. Partitioning and Collecting to a Map (Partition by Gender)

@@ -94,5 +94,25 @@ public class DemoStream {
     Set<Integer> integerSet = integers.collect(Collectors.toSet());
     System.out.println(integerSet); // [18, 2, 13, 4, 15]
 
+    // FlatMap
+    List<Customer2> customers5 = List.of(new Customer2("Alice", 18, List.of( 
+                                         new Customer2.Address("0001", "Kowloon"), 
+                                         new Customer2.Address("0012", "NT"))), 
+                                         new Customer2("Bob", 20, List.of( 
+                                         new Customer2.Address("0003", "Kowloon"), 
+                                         new Customer2.Address("0014", "HKIsland"))), 
+                                         new Customer2("Charlie", 22, List.of( 
+                                         new Customer2.Address("0004", "Kowloon"))));
+    // List<Address>, which includes all addresses from all customers
+    // for loop
+
+    // stream -> flatMap
+    customers5.stream() // Stream<Customer2>
+    // !!! // flatMap(): input stream object, return Stream<Address>
+    .flatMap(c -> c.getAddresses().stream())
+    .collect(Collectors.toList());
+
+    System.out.println(address);
+    
   }
 }
