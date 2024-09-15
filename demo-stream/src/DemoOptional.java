@@ -91,7 +91,7 @@ public class DemoOptional {
 
     // Bad idea
     // !!! Optional Parameter design doesn't help solving the chance of null value
-    public static String concat(Optional<String> s1, String s2){
+    public static String concat(Optional<String> s1, String s2) {
       if (s1 != null && s1.isPresent())
         return s1.get().concat(s2);
       throw new IllegalArgumentException();
