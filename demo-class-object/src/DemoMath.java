@@ -72,7 +72,9 @@ public class DemoMath {
     System.out.println(new Random().nextInt(80) + 1);
 
     String y = "2020";
-    String xxx = Integer.toBinaryString(y);
+    int yInt = Integer.parseInt(y);
+    String xxx = Integer.toBinaryString(yInt);
+    System.out.println(xxx);
 
 
 
