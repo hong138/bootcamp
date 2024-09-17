@@ -42,7 +42,7 @@ public class DemoStringBuilder {
   System.out.println(sb.toString().length());
   long after = System.currentTimeMillis();
   System.out.println("Time: " + (after - before));
-  // StringBuffer Times: 525
+  // StringBuffer Times: 5438
   // StringBuilder Times: 2433
 
   }
